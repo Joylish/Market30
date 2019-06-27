@@ -8,7 +8,6 @@ package com.openhack.market30;
         import android.os.Bundle;
         import android.support.v7.widget.GridLayoutManager;
         import android.support.v7.widget.RecyclerView;
-        import android.util.Log;
         import android.view.View;
         import android.widget.Button;
         import android.widget.Toast;
@@ -33,7 +32,7 @@ public class BarcodeScan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.seller_main);
         btnShowBarcodeScreen = findViewById(R.id.btn_show_barcode_screen);
         mRecyclerView = findViewById(R.id.recycler_view_item_card);
 
