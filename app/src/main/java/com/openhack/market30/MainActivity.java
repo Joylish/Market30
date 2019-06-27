@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        Button my_btn = (Button) findViewById(R.id.my_btn);
+        Button my_btn = (Button) findViewById(R.id.calendar_btn);
         my_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
