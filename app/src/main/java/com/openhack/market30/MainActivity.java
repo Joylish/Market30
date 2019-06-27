@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity);
         btnShowBarcodeScreen = findViewById(R.id.btn_show_barcode_screen);
         mRecyclerView = findViewById(R.id.recycler_view_item_card);
 
