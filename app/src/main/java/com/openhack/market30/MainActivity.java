@@ -1,11 +1,14 @@
 package com.openhack.market30;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<ItemInCard> items = new ArrayList<>();
     private RecyclerView mRecyclerView;
-    private Activity activity;
+    private Activity activity = this;
 
     FloatingActionButton btnShowBarcodeScreen;
 
@@ -31,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        activity = this;
         btnShowBarcodeScreen = findViewById(R.id.btn_show_barcode_screen);
         mRecyclerView = findViewById(R.id.recycler_view_item_card);
 
@@ -43,9 +45,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 IntentIntegrator integrator = new IntentIntegrator(activity);
-                // integrator.setCaptureActivity();
+                integrator.setCaptureActivity(CustomScannerActivity.class);
                 integrator.initiateScan();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent intent) {
+        if(resultCode == Activity.RESULT_OK){
+            IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+            String re = scanResult.getContents();
+            Toast.makeText(this, re, Toast.LENGTH_LONG).show();
+        }
     }
 }
