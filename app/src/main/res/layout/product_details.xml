@@ -41,12 +41,6 @@
                     android:text="제목"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/my_btn"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="0.3"
-                    android:background="@drawable/my" />
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
 
