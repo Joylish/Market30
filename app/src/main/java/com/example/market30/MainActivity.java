@@ -25,6 +25,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         ProductInfomation ary5 = new ProductInfomation();
         ary5.setTimer(40);
         ary5.setProductName("빵");
-        ary5.setPrice(00);
+        ary5.setPrice(300);
         ary5.setMarketName("편의점3");
         ProductInfomation ary6 = new ProductInfomation();
         ary6.setTimer(60);
@@ -97,6 +99,31 @@ public class MainActivity extends AppCompatActivity {
         convineItemList.add(ary4);
         convineItemList.add(ary5);
         convineItemList.add(ary6);
+
+
+        TextView superMarketBtn = (TextView)findViewById(R.id.supermarket_whole_view_txt);
+        superMarketBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MarketActivity.class);
+
+                intent.putExtra("MarketType", "슈퍼마켓");
+
+                MainActivity.this.startActivity(intent);
+            }
+        });
+
+        TextView convineBtn = (TextView)findViewById(R.id.convine_whole_view_txt);
+        convineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MarketActivity.class);
+
+                intent.putExtra("MarketType", "편의점");
+
+                MainActivity.this.startActivity(intent);
+            }
+        });
 
         setMarketTypeItemList();
     }
@@ -117,28 +144,6 @@ public class MainActivity extends AppCompatActivity {
 
         ListDecoration decoration2 = new ListDecoration();
         convineView.addItemDecoration(decoration2);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     class ListDecoration extends RecyclerView.ItemDecoration {
