@@ -1,5 +1,6 @@
 package com.example.market30;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -25,12 +26,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.openhack.market30.R;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     RecyclerView superView;
     RecyclerAdapter superAdapter;

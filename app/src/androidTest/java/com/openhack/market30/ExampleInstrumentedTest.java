@@ -1,4 +1,4 @@
-package com.example.market30;
+package com.openhack.market30;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.market30", appContext.getPackageName());
+        assertEquals("com.openhack.market30", appContext.getPackageName());
     }
 }
