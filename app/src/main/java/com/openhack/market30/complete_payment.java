@@ -1,4 +1,4 @@
-package com.example.market30;
+package com.openhack.market30;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

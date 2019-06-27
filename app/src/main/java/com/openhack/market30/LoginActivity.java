@@ -1,10 +1,9 @@
-package com.example.market30;
+package com.openhack.market30;
 
         import android.content.Intent;
         import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
-        import android.util.Log;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
@@ -13,6 +12,8 @@ package com.example.market30;
         import com.android.volley.RequestQueue;
         import com.android.volley.Response;
         import com.android.volley.toolbox.Volley;
+        import com.example.market30.MainActivity;
+
         import org.json.JSONObject;
 
 
@@ -64,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (success) {
                                 login_id = json_response.getString("id");
                                 login_pwd = json_response.getString("pwd");
-                                Intent main_intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent main_intent = new Intent(LoginActivity.this, com.openhack.market30.MainActivity.class);
                                 LoginActivity.this.startActivity(main_intent);
                                 finish();
                             }

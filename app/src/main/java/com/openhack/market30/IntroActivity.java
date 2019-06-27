@@ -1,8 +1,10 @@
-package com.example.market30;
+package com.openhack.market30;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.openhack.market30.LoginActivity;
 
 public class IntroActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +20,7 @@ public class IntroActivity extends Activity{
 
         // next Activity 기재.
 
-        startActivity(new Intent(this,LoginActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 }

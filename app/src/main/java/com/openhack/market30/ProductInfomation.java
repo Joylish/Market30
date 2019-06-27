@@ -1,4 +1,4 @@
-package com.example.market30;
+package com.openhack.market30;
 
 public class ProductInfomation {
     private int timer;

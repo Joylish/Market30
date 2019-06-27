@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.market30.MarketActivity">
+    tools:context=".MarketActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                tools:context="com.example.market30.MarketActivity">
+                tools:context=".MarketActivity">
 
                 <Button
                     android:id="@+id/calendar_btn"
