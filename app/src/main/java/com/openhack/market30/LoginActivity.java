@@ -12,7 +12,6 @@ package com.openhack.market30;
         import com.android.volley.RequestQueue;
         import com.android.volley.Response;
         import com.android.volley.toolbox.Volley;
-        import com.example.market30.MainActivity;
 
         import org.json.JSONObject;
 
@@ -91,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                Intent register_intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent register_intent = new Intent(LoginActivity.this, LoginActivity.class);
                 LoginActivity.this.startActivity(register_intent);
             }
         });

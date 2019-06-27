@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layoutManager="GridLayoutManager"
     app:spanCount="2"
-    tools:context=".MainActivity">
+    tools:context=".BarcodeScan">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_show_barcode_screen"

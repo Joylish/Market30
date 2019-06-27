@@ -46,7 +46,7 @@ public class BarcodeRequest extends AppCompatActivity {
             requestBody.put("barcode", 40111896);
         } catch(Exception e) {
             // check e
-            Log.d("MainActivity", e.getMessage());
+            Log.d("BarcodeRequest", e.getMessage());
         }
 
         JsonObjectRequest postStringRequest = new JsonObjectRequest(
@@ -56,7 +56,7 @@ public class BarcodeRequest extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                 @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("MainActivity", response.toString());
+                        Log.d("BarcodeRequest", response.toString());
                         String a =response.optString("data");
                         textView.append(a);
                         //List<String> list = new ArrayList<String>();
@@ -66,7 +66,7 @@ public class BarcodeRequest extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("MainActivity", error.getMessage());
+                        Log.d("BarcodeRequest", error.getMessage());
                     }
                 });
 
