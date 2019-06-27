@@ -6,6 +6,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,8 +42,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        Button my_btn = (Button) findViewById(R.id.my_btn);
+        my_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.activity_main);
+                View drawerView = (View) findViewById(R.id.slide_menu);
+                drawerLayout.openDrawer(drawerView);
+            }
+        });
+
         superView = (RecyclerView)findViewById(R.id.market_type_item_recyclerview);
         convineView = (RecyclerView)findViewById(R.id.market_type_item_recyclerview2);
 
