@@ -1,5 +1,6 @@
 package com.example.market30;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import com.openhack.market30.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarketActivity extends AppCompatActivity {
+public class MarketActivity extends Activity {
 
     ListView marketItemView;
     ListAdapter marketAdapter;
