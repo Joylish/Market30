@@ -3,7 +3,6 @@ package com.openhack.market30;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.openhack.market30.LoginActivity;
 
 public class IntroActivity extends Activity{

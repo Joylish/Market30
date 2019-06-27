@@ -23,6 +23,12 @@
 
         <activity android:name=".complete_payment"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".BarcodeRequest"></activity>
+        <activity android:name=".BarcodeScan"></activity>
+        <activity android:name=".ConfirmBarcode"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MarketActivity"></activity>
+        <activity android:name=".ProductActivity"></activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
