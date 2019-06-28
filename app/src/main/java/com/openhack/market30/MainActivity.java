@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +36,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buyer_main);
-
+        TextView map_txt = (TextView) findViewById(R.id.map);
+        map_txt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
 //        Button my_btn = (Button) findViewById(R.id.calendar_btn);
 //        my_btn.setOnClickListener(new View.OnClickListener() {
 //            @Override

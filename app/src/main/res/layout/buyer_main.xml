@@ -28,11 +28,11 @@
                 tools:context=".MainActivity">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/map"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_weight="3"
-                    android:text="제목"
+                    android:text="익산시"
                     android:textAlignment="center" />
 
             </LinearLayout>
