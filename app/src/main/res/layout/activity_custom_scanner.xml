@@ -16,7 +16,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#86B994"></LinearLayout>
+        android:background="#86B994">
+
+        <ImageView
+            android:id="@+id/intrologo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo2"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
