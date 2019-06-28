@@ -26,7 +26,7 @@ public class BarcodeRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.barcoderequest);
 
-        final TextView textView = (TextView)findViewById(R.id.textView);
+        final TextView textView = (TextView) findViewById(R.id.textView);
 
         RequestQueue requestQueue;
 
@@ -44,7 +44,7 @@ public class BarcodeRequest extends AppCompatActivity {
         JSONObject requestBody = new JSONObject();
         try {
             requestBody.put("barcode", 40111896);
-        } catch(Exception e) {
+        } catch (Exception e) {
             // check e
             Log.d("BarcodeRequest", e.getMessage());
         }
@@ -54,21 +54,21 @@ public class BarcodeRequest extends AppCompatActivity {
                 "http://ec2-13-209-77-121.ap-northeast-2.compute.amazonaws.com:6001/api/v1/users/verify_barcode",
                 requestBody,
                 new Response.Listener<JSONObject>() {
-                @Override
+                    @Override
                     public void onResponse(JSONObject response) {
                         Log.d("BarcodeRequest", response.toString());
-                        String a =response.optString("data");
+                        String a = response.optString("data");
                         textView.append(a);
                         //List<String> list = new ArrayList<String>();
                         // JSONArray array = response.getJSONArray("data");
-                       }
+                    }
 
                 }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("BarcodeRequest", error.getMessage());
-                    }
-                });
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("BarcodeRequest", error.getMessage());
+            }
+        });
 
         requestQueue.add(postStringRequest);
     }

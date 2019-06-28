@@ -8,8 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">TITLE_COLOR_GOES_HERE</item>
-        <item name="android:textColorSecondary">SUBTITLE_COLOR_GOES_HERE</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#204982</item>
     </style>
 
 </resources>
