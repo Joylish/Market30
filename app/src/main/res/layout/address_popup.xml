@@ -28,8 +28,9 @@
     </LinearLayout>
 
     <ListView
-        android:layout_height="wrap_content"
         android:id="@+id/listView1"
+        android:layout_height="wrap_content"
+
         android:layout_width="fill_parent">
 
     </ListView>
