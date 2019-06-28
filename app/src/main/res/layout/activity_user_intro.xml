@@ -10,7 +10,7 @@
         android:id="@+id/intrologo"
         android:layout_width="119dp"
         android:layout_height="131dp"
-        android:src="@drawable/thirtyuplogo"
+        android:src="@drawable/logo2"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="267dp" />

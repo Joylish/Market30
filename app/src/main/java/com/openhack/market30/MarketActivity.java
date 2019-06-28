@@ -3,8 +3,10 @@ package com.openhack.market30;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +31,10 @@ public class MarketActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.market_type_details);
+
+        String uri = getIntent().getStringExtra("uri");
+        ImageView productImage = (ImageView) findViewById(R.id.imageView9);
+        productImage.setImageURI(Uri.parse(uri));
 
 
 //        Button my_btn = (Button) findViewById(R.id.market_btn);
