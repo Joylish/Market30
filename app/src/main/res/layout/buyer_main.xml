@@ -18,7 +18,6 @@
             android:layout_height="68dp"
             android:background="#F8FFFC"
             android:baselineAligned="true"
-            android:baselineAlignedChildIndex="2dp"
             android:orientation="horizontal">
 
             <TextView
