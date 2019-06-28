@@ -33,65 +33,65 @@ public class LoginActivity extends AppCompatActivity {
         final Button login_btn = (Button) findViewById(R.id.login_btn);
         TextView forget = (TextView) findViewById(R.id.forget_btn);
         TextView signUp = (TextView) findViewById(R.id.signup_btn);
-        login_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userId = id_txt.getText().toString();
-                String userPwd = pwd_txt.getText().toString();
-
-                if (userId.equals("")) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                    dialog = builder.setMessage("Input id, please")
-                            .setNegativeButton("Check", null)
-                            .create();
-                    dialog.show();
-                }
-
-                if (userPwd.equals("")) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                    dialog = builder.setMessage("Input password, please")
-                            .setNegativeButton("Check", null)
-                            .create();
-                    dialog.show();
-                }
-
-                Response.Listener<String> response_listener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject json_response = new JSONObject(response);
-                            boolean success = json_response.getBoolean("success");
-                            if (success) {
-                                login_id = json_response.getString("id");
-                                login_pwd = json_response.getString("pwd");
-                                Intent main_intent = new Intent(LoginActivity.this, com.openhack.market30.MainActivity.class);
-                                LoginActivity.this.startActivity(main_intent);
-                                finish();
-                            }
-                            else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                dialog = builder.setMessage("Fail Login")
-                                        .setNegativeButton("Check", null)
-                                        .create();
-                                dialog.show();
-                            }
-                        }
-                        catch (Exception e)  {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-
-                LoginRequest login_request = new LoginRequest(userId, userPwd, response_listener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(login_request);
-            }
-        });
+//        login_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String userId = id_txt.getText().toString();
+//                String userPwd = pwd_txt.getText().toString();
+//
+//                if (userId.equals("")) {
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                    dialog = builder.setMessage("Input id, please")
+//                            .setNegativeButton("Check", null)
+//                            .create();
+//                    dialog.show();
+//                }
+//
+//                if (userPwd.equals("")) {
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                    dialog = builder.setMessage("Input password, please")
+//                            .setNegativeButton("Check", null)
+//                            .create();
+//                    dialog.show();
+//                }
+//
+//                Response.Listener<String> response_listener = new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        try {
+//                            JSONObject json_response = new JSONObject(response);
+//                            boolean success = json_response.getBoolean("success");
+//                            if (success) {
+//                                login_id = json_response.getString("id");
+//                                login_pwd = json_response.getString("pwd");
+//                                Intent main_intent = new Intent(LoginActivity.this, com.openhack.market30.MainActivity.class);
+//                                LoginActivity.this.startActivity(main_intent);
+//                                finish();
+//                            }
+//                            else {
+//                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                                dialog = builder.setMessage("Fail Login")
+//                                        .setNegativeButton("Check", null)
+//                                        .create();
+//                                dialog.show();
+//                            }
+//                        }
+//                        catch (Exception e)  {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                };
+//
+//                LoginRequest login_request = new LoginRequest(userId, userPwd, response_listener);
+//                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+//                queue.add(login_request);
+//            }
+//        });
         signUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                //Intent register_intent = new Intent(LoginActivity.this, AddressPopupActivity.class);
-                //LoginActivity.this.startActivity(register_intent);
+            Intent register_intent = new Intent(LoginActivity.this, BarcodeScan.class);
+            LoginActivity.this.startActivity(register_intent);
             }
         });
         login_btn.setOnClickListener(new View.OnClickListener(){
