@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".MapActivity"></activity>
         <activity android:name=".CustomScannerActivity" />
         <activity android:name=".IntroActivity">
             <intent-filter>
@@ -29,6 +30,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MarketActivity" />
         <activity android:name=".ProductActivity" />
+        <activity android:name=".UserInformation" />
     </application>
 
 </manifest>

@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                Intent register_intent = new Intent(LoginActivity.this, BarcodeScan.class);
+                Intent register_intent = new Intent(LoginActivity.this, UserInformation.class);
                 LoginActivity.this.startActivity(register_intent);
             }
         });
