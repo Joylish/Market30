@@ -8,7 +8,18 @@
     tools:context=".complete_payment"
     tools:showIn="@layout/activity_complete_payment">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="#F8FFFC"
+        android:src="@drawable/logo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="감사합니다."
@@ -23,9 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="결제가 완료되었습니다."
+        app:layout_constraintBottom_toTopOf="@+id/textView39"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

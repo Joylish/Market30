@@ -1,5 +1,6 @@
 package com.openhack.market30;
 
+        import android.app.Activity;
         import android.content.Intent;
         import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ package com.openhack.market30;
         import org.json.JSONObject;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
     private AlertDialog dialog;
     public static String login_id, login_pwd;
 

@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buyer_main);
-        TextView map_txt = (TextView) findViewById(R.id.map);
+        TextView map_txt = (TextView) findViewById(R.id.textView17);
         map_txt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
